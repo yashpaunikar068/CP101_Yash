@@ -7,7 +7,11 @@
 
 public class HandToDice {
 	public int[] handToDice(int hand) {
-		// your code goes here
-		return new int[0];
+		int last = hand%10;
+		hand = hand/10;
+		int mid = hand%10;
+		hand = hand/10;
+		int first = hand%10;
+		return {first, mid, last};
 	}
 }
