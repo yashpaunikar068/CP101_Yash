@@ -13,7 +13,10 @@
 
 public class DiceToOrderedHand {
 	public int diceToOrderedHand(int a, int b, int c) {
-		// your code goes here
-		return 0;
+		int ans = 0;
+		ans = c;
+		ans = b*10 + ans;
+		ans = c*100 + ans;
+		return ans;
 	}	
 }
