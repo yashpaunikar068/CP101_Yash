@@ -32,18 +32,36 @@
 import java.util.*;
 
 public class HashtablePlay {
-
+	Map<String, String> map = new HashMap<>();
 	public HashtablePlay() {
 		// Your code goes here
+		map.put("Bangalore - India", "ASIA");
+		map.put("Atlanta", "USA");
+		map.put("Shanghai - China", "ASIA");
+		map.put("Mountain View", "USA");
 	}
 
 	public List<String> alphaUSA() {
 		// Your code goes here
-		return null;
+		List<String> location = new ArrayList<>();
+		for(String s : map.keySet()){
+			if(map.get(s).equals("ASIA"))
+			location.add(s);
+		}
+		Collections.sort(location);
+		return location;
+
 	}
 
 	public List<String> sortAsia() {
 		// Your code goes here
-		return null;
+		
+		List<String> usa = new ArrayList<>();
+		for(String s : map.keySet()){
+			if(map.get(s).equals("USA"))
+			usa.add(s);
+		}
+		Collections.sort(usa);
+		return usa;
 	}
 }

@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\ypaun\\OneDrive\\Desktop\\CP101\\junit-4.9.jar"
+    ],
+    "java.project.sourcePaths": [
+        "04-pythondictionaries-Java"
+    ]
+}
