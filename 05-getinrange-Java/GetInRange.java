@@ -6,7 +6,13 @@
 
 class GetInRange {
 	public int getInRange(int x, int bound1, int bound2){
-		// Your code goes here
-		return -1;
+		int lb = Math.min(bound1, bound2);
+		int ub = Math.max(bound1, bound2);
+		if(x <= lb)
+			return lb;
+		else if(x > lb && x < ub)
+			return x;
+		else 
+			return ub;
 	}
 }
