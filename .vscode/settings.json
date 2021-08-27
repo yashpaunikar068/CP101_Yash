@@ -1,0 +1,10 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\ypaun\\OneDrive\\Desktop\\CP101\\junit-4.9.jar"
+    ],
+    "java.project.sourcePaths": [
+        "12-playStep2-Java",
+        "07-isfactor-Java"
+    ]
+}
