@@ -8,6 +8,15 @@
 class NearestBusStop {
 	public int nearestBusStop(int street){
 		// your code goes here
-		return -1;
+		int stop = 8;
+		for(int i = 1; stop < street; i++){
+			stop *= i;
+		}
+		int lowerbound = stop - 8;
+		if(street - lowerbound <= stop - street)
+				return lowerbound;
+		else
+			return stop;
 	}
 }
+
