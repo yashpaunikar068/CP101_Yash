@@ -6,12 +6,15 @@
 // in increasing order. How does a function return multiple values? Like so:
 // return root1, root2
 
-
+import java.lang.Math;
 public class MyMath {
 	public int[] find_int_roots(int a, int b, int c){
 		int[] arr = new int[2];
-
-		// Your code goes here...
+		double d = b * b - 4.0 * a * c;  
+		double r1 = (-b + Math.pow(d, 0.5)) / (2.0 * a);  
+		double r2 = (-b - Math.pow(d, 0.5)) / (2.0 * a);  
+		arr[0] = (int)r1;
+		arr[1] = (int)r2;
 		return arr;
 	}
 }

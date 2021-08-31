@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "01-find_int_roots-Java"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\ypaun\\OneDrive\\Desktop\\CP101\\junit-4.9.jar"
+    ]
+}
