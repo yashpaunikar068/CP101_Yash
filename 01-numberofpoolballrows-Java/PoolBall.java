@@ -8,6 +8,11 @@
 public class PoolBall {
 	public int numberofpoolballrows(int balls) {
 		// Your code goes here...
-		return 1;
+		int count = 0;
+		int i = 0;
+		for(i = 1; count < balls; i++){
+			count += i;
+		}
+		return i-1;
 	}
 }
