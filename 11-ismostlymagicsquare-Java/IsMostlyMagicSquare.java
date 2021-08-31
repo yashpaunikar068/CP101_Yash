@@ -16,6 +16,28 @@
 public class IsMostlyMagicSquare {
 	public boolean isMostlyMagicSquare(int[][] a) {
 		// Your code goes here
-		return false;
+		int rows = a.length;
+		int cols = a[0].length;
+		int row1sum = 0;
+		for(int i = 0; i < cols; i++){
+			row1sum += a[0][i];
+		}
+		for(int i = 0; i < rows; i++){
+			int rowsum = 0;
+			for(int j = 0; j < cols; j++){
+				rowsum += a[i][j];
+			}
+			if(row1sum != rowsum)
+				return false;
+		}
+		for(int i = 0; i < cols; i++){
+			int rowsum = 0;
+			for(int j = 0; j < rows; j++){
+				rowsum += a[j][i];
+			}
+			if(row1sum != rowsum)
+				return false;
+		}
+		return true;
 	}
 }
