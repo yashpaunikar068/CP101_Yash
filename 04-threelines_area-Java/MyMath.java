@@ -7,6 +7,7 @@ import java.lang.Math.*;
 public class MyMath {
 	public int threeLinesArea(int a, int b, int c){
 		// Your code goes here...
-		return 0;
+		int s = (a+b+c)/2;
+		return (int)Math.sqrt(s*(s-a)*(s-b)*(s-c));
 	}
 }
