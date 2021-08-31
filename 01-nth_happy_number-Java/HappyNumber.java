@@ -15,8 +15,35 @@
 // assert(nthHappyNumber(8) == 31)
 
 public class HappyNumber {
+	public int squareSum(int n){
+		int squareSum = 0;
+		while(n > 0){
+			squareSum += (n % 10) * (n % 10);
+			n = n/10;
+		}	
+		return squareSum;
+	}
+	public boolean isHappyNumber(int n) {
+		int s = n;
+        int f = n;
+        while(true){
+            s = squareSum(s);
+            f = squareSum(squareSum(f));
+            if(s != f)
+                continue;
+            else
+                break;
+		}
+        return (s == 1);    
+	}
 	public int nthHappyNumber(int n){
-		// Your code goes here...
-		return 0;	
+		int found = 1;
+		int guess = 0;
+		while (found <= n){
+			guess += 1;
+			if (isHappyNumber(guess))
+				found += 1;
+		}
+		return guess;	
 	}
 }
