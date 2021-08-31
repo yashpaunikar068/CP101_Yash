@@ -14,11 +14,26 @@
 // assert(ishappynumber(98) == False)
 // assert(ishappynumber(404) == True)
 // assert(ishappynumber(405) == False)
-
 public class HappyNumber {
-
+	public int squareSum(int n){
+		int squareSum = 0;
+		while(n > 0){
+			squareSum += (n % 10) * (n % 10);
+			n = n/10;
+		}	
+		return squareSum;
+	}
 	public boolean isHappyNumber(int n) {
-		// your code goes here
-		return false;
+		int s = n;
+        int f = n;
+        while(true){
+            s = squareSum(s);
+            f = squareSum(squareSum(f));
+            if(s != f)
+                continue;
+            else
+                break;
+		}
+        return (s == 1);    
 	}
 }
