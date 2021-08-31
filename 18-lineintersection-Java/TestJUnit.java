@@ -16,9 +16,9 @@ public class TestJUnit {
    @Test
    public void testCase1() {
       LineIntersection lineIntersection = new LineIntersection();
-      assertEquals("1.", 0, lineIntersection.lineIntersection(4, 13, 8, 17));
+      assertEquals("1.", -1, lineIntersection.lineIntersection(4, 13, 8, 17));
       assertEquals("2.", 0, lineIntersection.lineIntersection(2, 13, 2, 14));
-      assertEquals("3.", 0, lineIntersection.lineIntersection(8, 13, 4, 17));
+      assertEquals("3.", 1, lineIntersection.lineIntersection(8, 13, 4, 17));
    }
 
    @Test
