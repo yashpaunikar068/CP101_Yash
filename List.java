@@ -22,13 +22,39 @@
 //   [ 0, 1, 3] ]
 
 public class List {
-    public int[][] removeRowAndCol(int[][] arr, int row, int col) {
+    public static int[][] removeRowAndCol(int[][] arr, int row, int col) {
         // Your code goes here...
-        return null;
+        int ans[][] = new int[arr.length-1][arr[0].length-1];
+        int p = 0;
+        for( int i = 0; i < arr.length; ++i)
+        {
+            if ( i == row)
+                continue;
+
+
+            int q = 0;
+            for( int j = 0; j < arr[0].length; ++j)
+            {
+                if ( j == col)
+                    continue;
+
+                ans[p][q] = arr[i][j];
+                ++q;
+            }
+
+            ++p;
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
         // Write your own test cases
+        int[][] ans = {{2, 3, 5}, {0, 1, 3}};
+        int[][] ques = {{ 2, 3, 4, 5}, {8, 7, 6, 5}, {0, 1, 2, 3}};
+        if(removeRowAndCol(ques, 1, 2) == ans)
+            System.out.println("Passed the test case!");
+        else
+            System.out.println("not passed");
     }
 }
 
