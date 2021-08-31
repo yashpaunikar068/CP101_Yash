@@ -10,6 +10,13 @@
 public class MyMath {
 	public int largestPerfectSquare(int n) {
 		// Your code goes here
-		return 1;
+		int square = 0;
+		int i;
+		for (i = 1; square < n; i++) {
+			square = i*i;
+		}
+		if(square == n)
+			return (i-1)*(i-1);
+		return (i-2)*(i-2);
 	}
 }
