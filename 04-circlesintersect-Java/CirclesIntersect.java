@@ -7,6 +7,13 @@
 public class CirclesIntersect {
 	public boolean circlesIntersect(int x1, int y1, int r1, int x2, int y2, int r2){
 		// Your code goes here....
-		return false;
+		int distSq = (x1 - x2) * (x1 - x2) +
+                     (y1 - y2) * (y1 - y2);
+        int radSumSq = (r1 + r2) * (r1 + r2);
+        if (distSq == radSumSq)
+            return true;
+        else if (distSq > radSumSq)
+            return false;
+		return true;
 	}
 }
