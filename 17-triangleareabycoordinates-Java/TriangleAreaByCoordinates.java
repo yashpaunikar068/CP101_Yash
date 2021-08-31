@@ -7,6 +7,19 @@
 public class TriangleAreaByCoordinates {
 	public int triangleAreaByCoordinates(double x1, double y1, double x2, double y2, double x3, double y3) {
 		// Your code goes here
-		return 0;
+		double[] X = {x1, x2, x3};
+		double[] Y = {y1, y2, y3};
+		int n = X.length;
+		return (int)area(X, Y, n);
+	}
+	public double area(double X[], double Y[], int n){
+		double area = 0.0;
+        int j = n - 1;
+        for (int i = 0; i < n; i++)
+        {
+            area += (X[j] + X[i]) * (Y[j] - Y[i]);
+            j = i;
+        }
+        return Math.abs(area / 2.0);
 	}
 }
