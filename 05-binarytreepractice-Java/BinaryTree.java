@@ -24,8 +24,10 @@ public class BinaryTree {
 
 	private boolean search_Node(Node node, int value) {
 		// Your code goes here
+		if(node == null)
+			return false;
 		if(node.value == value)
 			return true;
-		return search_Node(node.left, value) || search_Node(node.right, value);;
+		return search_Node(node.left, value) || search_Node(node.right, value);
 	}
 }
