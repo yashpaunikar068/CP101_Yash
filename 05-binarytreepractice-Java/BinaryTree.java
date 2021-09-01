@@ -14,16 +14,18 @@ public class BinaryTree {
 	
 	public BinaryTree(int value) {
         // Your code goes here
+		root.value = value;
 	}
 
 	public boolean search(int value) {
 		// Your code goes here
-		return true;
+		return search_Node(root, value);
 	}
 
 	private boolean search_Node(Node node, int value) {
 		// Your code goes here
-		return false;
-
+		if(node.value == value)
+			return true;
+		return search_Node(node.left, value) || search_Node(node.right, value);;
 	}
 }
